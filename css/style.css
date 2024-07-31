@@ -1,9 +1,9 @@
 /* start valiable  */
 :root {
   --main-color: #2e9c00;
-  --transparent-color: #11637760;
-  --secondry-color:#777;
-  --section-paddin:100px;
+  --transparent-color: #11637780;
+  --secondry-color: #777;
+  --section-paddin: 100px;
 }
 /* end valiable  */
 
@@ -53,11 +53,9 @@ ul {
 /* end Global rules   */
 /* srart components  */
 
-
 .mian-heading {
   text-align: center;
   margin: 100px 0;
-
 }
 .mian-heading h3 {
   position: relative;
@@ -210,7 +208,6 @@ header nav div form i {
   background-image: url("../images/landing.jpg");
   background-size: cover;
   z-index: -2;
-  
 }
 
 .landing .overlay {
@@ -317,41 +314,96 @@ header nav div form i {
 /* end landing */
 
 /* start services  */
-.services{
-  padding:var(--section-padding) 0;
+.services {
+  padding: var(--section-padding) 0;
 }
 
-@media(min-width:768px){
-  .services .services-container{
+@media (min-width: 768px) {
+  .services .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
-    grid-column-gap:40px;
-    grid-row-gap:60px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
   }
 }
-.services .serv-box{
+.services .serv-box {
   display: flex;
-  
 }
-@media(max-width:767px){
-  .services .serv-box{
+@media (max-width: 767px) {
+  .services .serv-box {
     flex-direction: column;
     text-align: center;
-    margin-bottom:40px;
+    margin-bottom: 40px;
   }
-    .services .serv-box i{
-      margin-bottom: 20px;
-    }
+  .services .serv-box i {
+    margin-bottom: 20px;
+  }
 }
-.services .serv-box i{
-margin-right:50px;
+.services .serv-box i {
+  margin-right: 50px;
 }
-.services .serv-box h3{
-  margin-bottom:30px;
-  color:var(--main-color);
+.services .serv-box h3 {
+  margin-bottom: 30px;
+  color: var(--main-color);
 }
-.services .serv-box p{
+.services .serv-box p {
   line-height: 2;
-  color:var(--secondry-color)
+  color: var(--secondry-color);
 }
 /* end services  */
+
+/* start design  */
+.design {
+  padding: var(--section-paddin) 0;
+  background-image: url("../images/landing.jpg");
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.design::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000060;
+}
+.design .image,
+.design .text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.design .image img {
+  height: 650px;
+}
+@media(max-width:767px){
+  .design .image {
+    display:none;
+  }
+}
+.design .text {
+  color: white;
+  padding: 50px;
+  background-color: var(--transparent-color);
+}
+.design .text h3 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.design .text ul li {
+  padding: 15px 0;
+}
+
+.design .text ul li::before{
+  font-family: 'Font Awesome 6 Free';
+  content: "\f390";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+/* end design  */
