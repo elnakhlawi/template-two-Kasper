@@ -1088,6 +1088,14 @@ header nav div form i {
   justify-content: space-between;
 }
 
+@media(max-width:767px){
+  .contact-section .content {
+    flex-direction:column;
+    text-align: center;
+  }
+}
+
+
 .contact-section .content form {
   flex-basis: 70%;
 }
@@ -1135,6 +1143,13 @@ header nav div form i {
 
 .contact-section .content .info {
   flex-basis: 25%;
+}
+
+@media(max-width:767px) {
+  .contact-section .content .info {
+    margin-bottom:70px;
+    order:-1;
+  }
 }
 
 .contact-section .content .info h4 {
